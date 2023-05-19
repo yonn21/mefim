@@ -10,8 +10,10 @@ const movie = new mongoose.Schema(
     genres: Array,
     year: String,
     country: String,
+    country_url: String,
     duration: String,
     type: String,
+    type_url: String,
     type_sub: Array,
     trailer: String,
     episodes: Array,
@@ -26,6 +28,8 @@ const movie = new mongoose.Schema(
     views_year: Number,
     views_all: Number,
     number_favourited: Number,
+    created_at: { type: Date, default: Date.now },
+    updated_at: { type: Date, default: Date.now }
   },
   { versionKey: null }
 );
